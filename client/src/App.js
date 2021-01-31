@@ -21,6 +21,25 @@ export default function App() {
       });
   };
 
+  function handleChange(event) {
+    switch (event.target.name) {
+      case "firstname":
+        setFirstname(event.target.value);
+        break;
+      case "lastname":
+        setLastname(event.target.value);
+        break;
+      default:
+        break;
+    }
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    setFirstname(firstname);
+    setLastname(lastname);
+  }
+
   return (
     <div className="App">
       <h1>CodeOp's Facebook</h1>
@@ -30,15 +49,16 @@ export default function App() {
           students.map(s => (
             <li key={s.id}>
               {s.firstname} {s.lastname}
+              <button>Delete</button>
             </li>
           ))}
       </ul>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label>First Name</label>
-        <input className="firstname" type="text"></input>
+        <input className="firstname" type="text" onChange={handleChange} />
         <label>Last Name</label>
-        <input className="lastname" type="text"></input>
-        <button type="button">Add Friend</button>
+        <input className="lastname" type="text" onChange={handleChange} />
+        <button type="submit">Add Friend</button>
       </form>
     </div>
   );

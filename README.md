@@ -81,10 +81,10 @@ Give yourself a grade for each question. Explain why you gave yourself that grad
 
 ### 1. API Endpoints & MySQL
 
-- Grade:
-- Explanation:
+- Grade: 2
+- Explanation: My handleSubmit button wasn't working. I need to revise this.
 
 ### 2. Frontend
 
-- Grade:
-- Explanation:
+- Grade: 0
+- Explanation: I ran out of time. I also feel I need a lot of practice to get these methods committed to memory.
